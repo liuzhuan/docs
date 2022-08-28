@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "packageManager": "pnpm@7.9.5",
   "scripts": {
-      "docs:dev": "vitepress dev docs",
-      "docs:build": "vitepress build docs",
-      "docs:serve": "vitepress serve docs"
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
   },
   "keywords": [],
   "author": "",
@@ -17,9 +18,9 @@
   },
   "pnpm": {
     "peerDependencyRules": {
-        "ignoreMissing": [
-            "@algolia/client-search"
-        ]
+      "ignoreMissing": [
+        "@algolia/client-search"
+      ]
     }
   }
 }
