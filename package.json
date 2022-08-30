@@ -5,7 +5,7 @@
   "main": "index.js",
   "packageManager": "pnpm@7.9.5",
   "scripts": {
-    "docs:dev": "vitepress dev docs",
+    "docs:dev": "vitepress dev docs --host 0.0.0.0",
     "docs:build": "vitepress build docs",
     "docs:serve": "vitepress serve docs"
   },
