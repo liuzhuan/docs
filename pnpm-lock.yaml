@@ -1,10 +1,12 @@
 lockfileVersion: 5.4
 
 specifiers:
+  prettier: 2.7.1
   vitepress: 1.0.0-alpha.12
   vue: ^3.2.37
 
 devDependencies:
+  prettier: 2.7.1
   vitepress: 1.0.0-alpha.12
   vue: 3.2.37
 
@@ -21,6 +23,9 @@ packages:
     peerDependencies:
       '@algolia/client-search': ^4.9.1
       algoliasearch: ^4.9.1
+    peerDependenciesMeta:
+      '@algolia/client-search':
+        optional: true
     dependencies:
       '@algolia/autocomplete-shared': 1.7.1
       algoliasearch: 4.14.2
@@ -621,6 +626,12 @@ packages:
 
   /preact/10.10.6:
     resolution: {integrity: sha512-w0mCL5vICUAZrh1DuHEdOWBjxdO62lvcO++jbzr8UhhYcTbFkpegLH9XX+7MadjTl/y0feoqwQ/zAnzkc/EGog==}
+    dev: true
+
+  /prettier/2.7.1:
+    resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
     dev: true
 
   /resolve/1.22.1:
