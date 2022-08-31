@@ -9,7 +9,10 @@ export default {
     logo: "/site.png",
 
     // 顶部导航
-    nav: [{ text: "Vite", link: "/vite/" }],
+    nav: [
+      { text: "Vite", link: "/vite/" },
+      { text: "Rollup", link: "/rollup/" },
+    ],
     socialLinks: [{ icon: "github", link: "https://github.com/liuzhuan/docs" }],
 
     // 边栏
@@ -21,6 +24,12 @@ export default {
             { text: "起步", link: "/vite/guide/" },
             { text: "特性", link: "/vite/guide/features" },
           ],
+        },
+      ],
+      "/rollup/": [
+        {
+          text: "介绍",
+          items: [{ text: "起步", link: "/rollup/index" }],
         },
       ],
     },
