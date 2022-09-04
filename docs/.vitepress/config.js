@@ -12,6 +12,7 @@ export default {
     nav: [
       { text: 'Vite', link: '/vite/' },
       { text: 'Rollup', link: '/rollup/' },
+      { text: 'D3.js', link: '/d3/' },
     ],
     socialLinks: [{ icon: 'github', link: 'https://github.com/liuzhuan/docs' }],
 
