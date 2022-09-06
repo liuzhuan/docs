@@ -10,6 +10,7 @@ export default {
 
     // 顶部导航
     nav: [
+      { text: 'Lodash', link: '/lodash/' },
       { text: 'Vite', link: '/vite/' },
       { text: 'Rollup', link: '/rollup/' },
       { text: 'D3.js', link: '/d3/' },

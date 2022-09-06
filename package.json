@@ -23,5 +23,8 @@
         "@algolia/client-search"
       ]
     }
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
   }
 }

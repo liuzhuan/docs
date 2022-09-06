@@ -1,9 +1,13 @@
 lockfileVersion: 5.4
 
 specifiers:
+  lodash: ^4.17.21
   prettier: 2.7.1
   vitepress: 1.0.0-alpha.12
   vue: ^3.2.37
+
+dependencies:
+  lodash: 4.17.21
 
 devDependencies:
   prettier: 2.7.1
@@ -594,6 +598,10 @@ packages:
   /jsonc-parser/3.1.0:
     resolution: {integrity: sha512-DRf0QjnNeCUds3xTjKlQQ3DpJD51GvDjJfnxUVWg6PZTo2otSm+slzNAxU/35hF8/oJIKoG9slq30JYOsF2azg==}
     dev: true
+
+  /lodash/4.17.21:
+    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
+    dev: false
 
   /magic-string/0.25.9:
     resolution: {integrity: sha512-RmF0AsMzgt25qzqqLc1+MbHmhdx0ojF2Fvs4XnOqz2ZOBXzzkEwc/dJQZCYHAn7v1jbVOjAZfK8msRn4BxO4VQ==}
