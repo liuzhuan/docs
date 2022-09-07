@@ -10,6 +10,7 @@ export default {
 
     // 顶部导航
     nav: [
+      { text: 'TypeScript', link: '/typescript/' },
       { text: 'Lodash', link: '/lodash/' },
       { text: 'Vite', link: '/vite/' },
       { text: 'Rollup', link: '/rollup/' },
