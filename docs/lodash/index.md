@@ -6,8 +6,10 @@ title: Lodash
   import _ from "lodash"
   import fp from "lodash/fp"
 
-  window._ = _
-  window.fp = fp
+  if (typeof window !== 'undefined') {
+    window._ = _
+    window.fp = fp
+  }
 </script>
 
 # Lodash
