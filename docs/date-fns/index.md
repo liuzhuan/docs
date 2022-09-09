@@ -11,7 +11,7 @@ $ pnpm add date-fns
 ## 使用
 
 ```js
-import { compareAsc, format } from 'date-fns'
+import { compareAsc, format, addDays } from 'date-fns'
 
 // 格式化输出日期
 console.log(format(new Date(2014, 1, 11), 'yyyy-MM-dd'))
@@ -24,4 +24,9 @@ const dates = [
   new Date(1989, 6, 10),
 ]
 dates.sort(compareAsc)
+
+// 计算未来的日期，支持负数
+const today = new Date()
+const tomorrow = addDays(today, 1)
+console.log('tomorrow:', tomorrow)
 ```
