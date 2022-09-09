@@ -2,6 +2,14 @@
 
 [date-fns](https://date-fns.org/), 一个处理时间的工具库。[文档地址](https://date-fns.org/docs/Getting-Started)。
 
+<script>
+  import * as datefns from "date-fns";
+
+  if (typeof window !== 'undefined') {
+    window.datefns = datefns;
+  }
+</script>
+
 ## 安装
 
 ```sh
