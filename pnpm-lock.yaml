@@ -1,12 +1,14 @@
-lockfileVersion: 5.4
+lockfileVersion: 5.3
 
 specifiers:
+  date-fns: ^2.29.2
   lodash: ^4.17.21
   prettier: 2.7.1
   vitepress: 1.0.0-alpha.12
   vue: ^3.2.37
 
 dependencies:
+  date-fns: 2.29.2
   lodash: 4.17.21
 
 devDependencies:
@@ -356,6 +358,11 @@ packages:
   /csstype/2.6.20:
     resolution: {integrity: sha512-/WwNkdXfckNgw6S5R125rrW8ez139lBHWouiBvX8dfMFtcn6V81REDqnH7+CRpRipfYlyU1CmOnOxrmGcFOjeA==}
     dev: true
+
+  /date-fns/2.29.2:
+    resolution: {integrity: sha512-0VNbwmWJDS/G3ySwFSJA3ayhbURMTJLtwM2DTxf9CWondCnh6DTNlO9JgRSq6ibf4eD0lfMJNBxUdEAHHix+bA==}
+    engines: {node: '>=0.11'}
+    dev: false
 
   /esbuild-android-64/0.14.54:
     resolution: {integrity: sha512-Tz2++Aqqz0rJ7kYBfz+iqyE3QMycD4vk7LBRyWaAVFgFtQ/O8EJOnVmTOiDWYZ/uYzB4kvP+bqejYdVKzE5lAQ==}

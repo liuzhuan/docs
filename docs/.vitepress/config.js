@@ -15,6 +15,7 @@ export default {
       { text: 'Vite', link: '/vite/' },
       { text: 'Rollup', link: '/rollup/' },
       { text: 'D3.js', link: '/d3/' },
+      { text: 'date-fns', link: '/date-fns/' },
     ],
     socialLinks: [{ icon: 'github', link: 'https://github.com/liuzhuan/docs' }],
 
