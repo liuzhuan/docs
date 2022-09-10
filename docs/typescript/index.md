@@ -2,7 +2,7 @@
 
 [TypeScript](https://www.typescriptlang.org/) 是基于 JavaScript 的强类型编程语言。微软出品。
 
-新手可以从 [The TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html) 学起。入门 TypeScrpt 需要 JS 基础，推荐阅读微软的 [JS 教程](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)或 MDN 的 [JS 指南](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)。
+新手可以从 [The TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html) 学起。入门 TypeScrpt 需要 JS 基础，推荐阅读微软的 [JS 教程](https://docs.microsoft.com/en-us/javascript/)或 MDN 的 [JS 指南](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)。
 
 ## 安装
 
