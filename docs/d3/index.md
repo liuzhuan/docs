@@ -84,7 +84,7 @@ const circles = svg.selectAll('circle').data(dataset).enter().append('circle')
 circles.attr('cx', (d, i) => i * 50 + 25)
 ```
 
-## 缩放函数 scale
+## 映射函数 scale
 
 D3 的 scale 是一类映射函数，把输入值域的数值（_input domain_）映射到输出范围（_output range_）。输出范围通常以屏幕像素为单位。
 
@@ -100,6 +100,82 @@ scale(100) // => 10
 ```js
 const max = d3.max(dataset, (d) => d[0])
 const min = d3.min(dataset, (d) => d[0])
+```
+
+除线性 scale 函数外，还有其他类型：
+
+- `scaleSqrt` 平方根性
+- `scalePow` 指数性
+- `scaleLog` 对数性
+- `scaleTime` 时间日期类
+
+### 时间类 scale
+
+d3 使用原生的 `Date` 类，表示日期和时间。要解析时间字符串，可以使用 `d3.timeParse()`：
+
+```js
+// 如果解析的字符串为 2022/09/11，即 year/month/date
+// 通过指定日期字符串模板，创建日期解析函数
+// %Y 表示四位年份 %m 表示月份 %d 表示日期
+const parseTime = d3.timeParse('%Y/%m/%d')
+parseTime('2022/09/11') // => 返回对应的 Date 实例
+```
+
+创建时间类 scale
+
+```js
+const xScale = d3
+  .scaleTime()
+  .domain([d3.min(dataset, (d) => d.Date), d3.max(dataset, (d) => d.Date)])
+  .range([padding, w - padding])
+```
+
+如果要格式化字符串的现实，使用 `d3.timeFormat()`:
+
+```js
+const formatTime = d3.timeFormat('%b %e')
+```
+
+## 坐标轴 Axis
+
+坐标轴分为上下左右四种，分别是 `d3.axisTop`, `d3.axisBottom`, `d3.axisLeft`, `d3.axisRight`，区别是刻度线和文字的方向。
+
+使用坐标轴分为两步：
+
+```js
+// 第一步，设置坐标轴的缩放参数
+const xAxis = d3.axisBottom().scale(xScale)
+
+// 第二步，在 DOM 中绘制 SVG 元素
+svg.append('g').call(xAxis)
+```
+
+之所以要放在 `g` 群组中，是为了方便统一调整坐标轴的样式。一般建议给坐标轴加上类名：
+
+```js
+svg.append('g').attr('class', 'axis').call(xAxis)
+```
+
+坐标轴位置如果不够理想，可以使用 CSS 平移：
+
+```js
+svg
+  .append('g')
+  .attr('class', 'axis')
+  .attr('transform', 'translate(0, ' + (h - padding) + ')')
+  .call(xAxis)
+```
+
+使用 `ticks(n)` 设定刻度个数，这里的 `n` 会被 d3 看作一种建议，和最终的实际结果也许有出入。
+
+```js
+d3.axisBottom().scale(xScale).ticks(5)
+```
+
+也可以使用 `tickValues()` 强制设定刻度数值：
+
+```js
+d3.axisBottom().scale(xScale).tickValues([0, 100, 250, 600])
 ```
 
 ## 参考资料
