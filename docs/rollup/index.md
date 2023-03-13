@@ -1,23 +1,50 @@
+
 # Rollup
 
 [Rollup](https://rollupjs.org/guide/en/) 是一个 JavaScript 模块打包器。
 
-## 快速起步
+## 快速开始
 
-```sh
-# 安装
-npm install --global rollup
+下载安装
 
-# 假设入口文件是 main.js ，输出文件是 bundle.js
-# 针对浏览器打包
-rollup main.js --file bundle.js --format iife
+``` shell
+# 创建 package.json 文件
+npm init -y
 
-# 针对 Node.js 打包
-rollup main.js --file bundle.js --format cjs
-
-# 针对浏览器和 Node.js 打包
-rollup main.js --file bundle.js --format umd --name "myBundle"
+# 本地安装 Rollup
+npm install rollup --save-dev
 ```
+
+分别编写两个 `.js` 文件，其中 `main.js` 是入口文件，`foo.js` 提供工具函数。
+
+``` js
+// main.js
+import { greet } from './foo'
+
+console.log(greet('Rollup'))
+
+// foo.js
+export function greet(msg) {
+    return `Hello ${msg}!`
+}
+
+export function max(a, b) {
+	return a > b ? a : b
+}
+```
+
+在命令行执行 `npx rollup main.js --file bundle.js`，打包产生一个新的文件 `bundle.js`。
+
+``` javascript
+// bundle.js
+function greet(msg) {
+    return `Hello ${msg}`
+}
+
+console.log(greet('Rollup'))
+```
+
+打包文件 `bundle.js` 中只包含入口文件使用的函数，代码干净整洁。
 
 ## 兼容性
 
